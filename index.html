@@ -112,8 +112,7 @@
         top: 100%;
         left: 0;
         right: 0;
-        max-height: 300px;
-        overflow-y: auto;
+        max-height: 350px;
         background: var(--card-bg);
         border: 2px solid var(--primary);
         border-radius: 8px;
@@ -121,9 +120,38 @@
         box-shadow: var(--shadow-md);
         z-index: 100;
         display: none;
+        flex-direction: column;
+    }
+    .custom-multiselect-options-container {
+        max-height: 280px;
+        overflow-y: auto;
+        flex: 1;
     }
     .custom-multiselect-dropdown.active {
-        display: block;
+        display: flex;
+    }
+    .custom-multiselect-actions {
+        display: flex;
+        gap: 8px;
+        padding: 10px 12px;
+        border-top: 1px solid var(--border-color);
+        background: var(--input-bg);
+        border-radius: 0 0 6px 6px;
+    }
+    .custom-multiselect-actions button {
+        flex: 1;
+        padding: 10px;
+        font-size: 14px;
+        font-weight: 600;
+        border-radius: 6px;
+    }
+    .custom-multiselect-actions .btn-ok {
+        background: var(--primary);
+        color: white;
+    }
+    .custom-multiselect-actions .btn-cancel {
+        background: var(--border-color);
+        color: var(--text);
     }
     .custom-multiselect-option {
         padding: 10px 12px;
@@ -369,73 +397,79 @@
           <span class="multiselect-count" id="multiselectCount" style="display:none;">0</span>
         </div>
         <div class="custom-multiselect-dropdown" id="multiselectDropdown">
-          <div class="custom-multiselect-option">
-            <input type="checkbox" value="Cement" id="mat-cement">
-            <label for="mat-cement">Cement</label>
+          <div class="custom-multiselect-options-container">
+            <div class="custom-multiselect-option">
+              <input type="checkbox" value="Cement" id="mat-cement">
+              <label for="mat-cement">Cement</label>
+            </div>
+            <div class="custom-multiselect-option">
+              <input type="checkbox" value="Bricks" id="mat-bricks">
+              <label for="mat-bricks">Bricks</label>
+            </div>
+            <div class="custom-multiselect-option">
+              <input type="checkbox" value="Brick Chips" id="mat-brickchips">
+              <label for="mat-brickchips">Brick Chips</label>
+            </div>
+            <div class="custom-multiselect-option">
+              <input type="checkbox" value="Borak Bamboo" id="mat-borak">
+              <label for="mat-borak">Borak Bamboo</label>
+            </div>
+            <div class="custom-multiselect-option">
+              <input type="checkbox" value="Sand" id="mat-sand">
+              <label for="mat-sand">Sand</label>
+            </div>
+            <div class="custom-multiselect-option">
+              <input type="checkbox" value="Muli Bamboo" id="mat-muli">
+              <label for="mat-muli">Muli Bamboo</label>
+            </div>
+            <div class="custom-multiselect-option">
+              <input type="checkbox" value="3mm Rope" id="mat-3mmrope">
+              <label for="mat-3mmrope">3mm Rope</label>
+            </div>
+            <div class="custom-multiselect-option">
+              <input type="checkbox" value="6mm Rope" id="mat-6mmrope">
+              <label for="mat-6mmrope">6mm Rope</label>
+            </div>
+            <div class="custom-multiselect-option">
+              <input type="checkbox" value="Gi wire" id="mat-giwire">
+              <label for="mat-giwire">Gi wire</label>
+            </div>
+            <div class="custom-multiselect-option">
+              <input type="checkbox" value="Jute Bag" id="mat-jutebag">
+              <label for="mat-jutebag">Jute Bag</label>
+            </div>
+            <div class="custom-multiselect-option">
+              <input type="checkbox" value="Geo Roll" id="mat-georoll">
+              <label for="mat-georoll">Geo Roll</label>
+            </div>
+            <div class="custom-multiselect-option">
+              <input type="checkbox" value="Geo Bag" id="mat-geobag">
+              <label for="mat-geobag">Geo Bag</label>
+            </div>
+            <div class="custom-multiselect-option">
+              <input type="checkbox" value="Rebar 8mm" id="mat-rebar8">
+              <label for="mat-rebar8">Rebar 8mm</label>
+            </div>
+            <div class="custom-multiselect-option">
+              <input type="checkbox" value="Rebar 10mm" id="mat-rebar10">
+              <label for="mat-rebar10">Rebar 10mm</label>
+            </div>
+            <div class="custom-multiselect-option">
+              <input type="checkbox" value="Rebar 12mm" id="mat-rebar12">
+              <label for="mat-rebar12">Rebar 12mm</label>
+            </div>
+            <div class="custom-multiselect-option">
+              <input type="checkbox" value="Rebar 16mm" id="mat-rebar16">
+              <label for="mat-rebar16">Rebar 16mm</label>
+            </div>
+            <div class="custom-multiselect-option">
+              <input type="checkbox" value="Permeable block" id="mat-permeable">
+              <label for="mat-permeable">Permeable block</label>
+            </div>
           </div>
-          <div class="custom-multiselect-option">
-            <input type="checkbox" value="Bricks" id="mat-bricks">
-            <label for="mat-bricks">Bricks</label>
-          </div>
-          <div class="custom-multiselect-option">
-            <input type="checkbox" value="Brick Chips" id="mat-brickchips">
-            <label for="mat-brickchips">Brick Chips</label>
-          </div>
-          <div class="custom-multiselect-option">
-            <input type="checkbox" value="Borak Bamboo" id="mat-borak">
-            <label for="mat-borak">Borak Bamboo</label>
-          </div>
-          <div class="custom-multiselect-option">
-            <input type="checkbox" value="Sand" id="mat-sand">
-            <label for="mat-sand">Sand</label>
-          </div>
-          <div class="custom-multiselect-option">
-            <input type="checkbox" value="Muli Bamboo" id="mat-muli">
-            <label for="mat-muli">Muli Bamboo</label>
-          </div>
-          <div class="custom-multiselect-option">
-            <input type="checkbox" value="3mm Rope" id="mat-3mmrope">
-            <label for="mat-3mmrope">3mm Rope</label>
-          </div>
-          <div class="custom-multiselect-option">
-            <input type="checkbox" value="6mm Rope" id="mat-6mmrope">
-            <label for="mat-6mmrope">6mm Rope</label>
-          </div>
-          <div class="custom-multiselect-option">
-            <input type="checkbox" value="Gi wire" id="mat-giwire">
-            <label for="mat-giwire">Gi wire</label>
-          </div>
-          <div class="custom-multiselect-option">
-            <input type="checkbox" value="Jute Bag" id="mat-jutebag">
-            <label for="mat-jutebag">Jute Bag</label>
-          </div>
-          <div class="custom-multiselect-option">
-            <input type="checkbox" value="Geo Roll" id="mat-georoll">
-            <label for="mat-georoll">Geo Roll</label>
-          </div>
-          <div class="custom-multiselect-option">
-            <input type="checkbox" value="Geo Bag" id="mat-geobag">
-            <label for="mat-geobag">Geo Bag</label>
-          </div>
-          <div class="custom-multiselect-option">
-            <input type="checkbox" value="Rebar 8mm" id="mat-rebar8">
-            <label for="mat-rebar8">Rebar 8mm</label>
-          </div>
-          <div class="custom-multiselect-option">
-            <input type="checkbox" value="Rebar 10mm" id="mat-rebar10">
-            <label for="mat-rebar10">Rebar 10mm</label>
-          </div>
-          <div class="custom-multiselect-option">
-            <input type="checkbox" value="Rebar 12mm" id="mat-rebar12">
-            <label for="mat-rebar12">Rebar 12mm</label>
-          </div>
-          <div class="custom-multiselect-option">
-            <input type="checkbox" value="Rebar 16mm" id="mat-rebar16">
-            <label for="mat-rebar16">Rebar 16mm</label>
-          </div>
-          <div class="custom-multiselect-option">
-            <input type="checkbox" value="Permeable block" id="mat-permeable">
-            <label for="mat-permeable">Permeable block</label>
+          <div class="custom-multiselect-actions">
+            <button type="button" class="btn-cancel" id="multiselectCancel">Cancel</button>
+            <button type="button" class="btn-ok" id="multiselectOK">OK</button>
           </div>
         </div>
       </div>
@@ -474,10 +508,23 @@
     const multiselectDropdown = document.getElementById('multiselectDropdown');
     const multiselectPlaceholder = document.getElementById('multiselectPlaceholder');
     const multiselectCount = document.getElementById('multiselectCount');
+    const multiselectOK = document.getElementById('multiselectOK');
+    const multiselectCancel = document.getElementById('multiselectCancel');
+    
+    // Store temporary selections when dropdown opens
+    let tempSelections = [];
 
     // Toggle dropdown
     multiselectHeader.addEventListener('click', (e) => {
       e.stopPropagation();
+      const isOpening = !multiselectDropdown.classList.contains('active');
+      
+      if (isOpening) {
+        // Store current selections as temp when opening
+        const checkboxes = multiselectDropdown.querySelectorAll('input[type="checkbox"]');
+        tempSelections = Array.from(checkboxes).filter(cb => cb.checked).map(cb => cb.value);
+      }
+      
       multiselectDropdown.classList.toggle('active');
     });
 
@@ -488,7 +535,7 @@
       }
     });
 
-    // Handle checkbox changes
+    // Handle checkbox changes (just visual, not saved yet)
     function updateMultiselectDisplay() {
       const checkboxes = multiselectDropdown.querySelectorAll('input[type="checkbox"]');
       const selected = Array.from(checkboxes).filter(cb => cb.checked);
@@ -507,17 +554,43 @@
         multiselectCount.textContent = selected.length;
         multiselectCount.style.display = 'inline-block';
       }
-      
-      saveDraft();
     }
 
-    // Wire all checkboxes
-    multiselectDropdown.querySelectorAll('input[type="checkbox"]').forEach(cb => {
-      cb.addEventListener('change', updateMultiselectDisplay);
+    // Wire all checkboxes (don't save draft on click, only on OK)
+    const optionsContainer = multiselectDropdown.querySelector('.custom-multiselect-options-container');
+    optionsContainer.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+      cb.addEventListener('change', () => {
+        // Don't save draft here, just update visuals
+      });
     });
 
-    // Prevent dropdown close when clicking inside
+    // OK Button - Confirm selections
+    multiselectOK.addEventListener('click', (e) => {
+      e.stopPropagation();
+      updateMultiselectDisplay();
+      multiselectDropdown.classList.remove('active');
+      saveDraft(); // Save only when OK is clicked
+      showToast('Materials selected');
+    });
+
+    // Cancel Button - Revert to temp selections
+    multiselectCancel.addEventListener('click', (e) => {
+      e.stopPropagation();
+      
+      // Restore previous selections
+      const checkboxes = multiselectDropdown.querySelectorAll('input[type="checkbox"]');
+      checkboxes.forEach(cb => {
+        cb.checked = tempSelections.includes(cb.value);
+      });
+      
+      updateMultiselectDisplay();
+      multiselectDropdown.classList.remove('active');
+      showToast('Selection cancelled');
+    });
+
+    // Prevent dropdown close when clicking inside options
     multiselectDropdown.addEventListener('click', (e) => {
+      // Allow clicks inside to work (checkboxes, etc.)
       e.stopPropagation();
     });
 
@@ -671,7 +744,8 @@
         }
         
         if (Array.isArray(draft.selectedMaterials) && draft.selectedMaterials.length) {
-          const checkboxes = multiselectDropdown.querySelectorAll('input[type="checkbox"]');
+          const optionsContainer = multiselectDropdown.querySelector('.custom-multiselect-options-container');
+          const checkboxes = optionsContainer.querySelectorAll('input[type="checkbox"]');
           checkboxes.forEach(cb => {
             cb.checked = draft.selectedMaterials.includes(cb.value);
           });
@@ -800,7 +874,8 @@
       const name = document.getElementById('customMaterial').value.trim();
       if (!name){ alert('Enter custom material name'); return; }
       
-      const existing = multiselectDropdown.querySelectorAll('input[type="checkbox"]');
+      const optionsContainer = multiselectDropdown.querySelector('.custom-multiselect-options-container');
+      const existing = optionsContainer.querySelectorAll('input[type="checkbox"]');
       const exists = Array.from(existing).some(cb => cb.value.toLowerCase() === name.toLowerCase());
       if (exists){ alert('Material already exists'); document.getElementById('customMaterial').value = ''; return; }
       
@@ -812,12 +887,10 @@
         <label for="mat-custom-${idSafe}">${escapeHtml(name)} (custom)</label>
       `;
       
-      const checkbox = div.querySelector('input');
-      checkbox.addEventListener('change', updateMultiselectDisplay);
-      
-      multiselectDropdown.appendChild(div);
+      optionsContainer.appendChild(div);
       document.getElementById('customMaterial').value = '';
       updateMultiselectDisplay();
+      saveDraft();
       showToast('Custom material added: ' + name);
     }
 
@@ -859,7 +932,8 @@
       if (el) {
         const matName = el.dataset.matName;
         el.remove();
-        const checkboxes = multiselectDropdown.querySelectorAll('input[type="checkbox"]');
+        const optionsContainer = multiselectDropdown.querySelector('.custom-multiselect-options-container');
+        const checkboxes = optionsContainer.querySelectorAll('input[type="checkbox"]');
         checkboxes.forEach(cb => { 
           if (cb.value === matName) {
             cb.checked = false;
@@ -1049,7 +1123,8 @@
       
       document.querySelectorAll('#schemeBox input[type=checkbox]').forEach(c=>c.checked=false);
       
-      const checkboxes = multiselectDropdown.querySelectorAll('input[type="checkbox"]');
+      const optionsContainer = multiselectDropdown.querySelector('.custom-multiselect-options-container');
+      const checkboxes = optionsContainer.querySelectorAll('input[type="checkbox"]');
       checkboxes.forEach(cb => cb.checked = false);
       updateMultiselectDisplay();
       
